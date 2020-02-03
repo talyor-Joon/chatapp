@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "818573558262",
+    "firebase_url": "https://java-925da.firebaseio.com",
+    "project_id": "java-925da",
+    "storage_bucket": "java-925da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:818573558262:android:61c9692f66efe4e4ccc7d7",
+        "android_client_info": {
+          "package_name": "com.example.javastudy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "818573558262-n4bnlr27sg4jt931a3t7tc2b9ccd7ev0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWpOg97pJLGqehIUBnC8OfTp-e95UaGQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "818573558262-n4bnlr27sg4jt931a3t7tc2b9ccd7ev0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

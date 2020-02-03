@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JAVA STUDY"
+        android:gravity="center"
+        android:textSize="50dp"
+        android:textColor="@android:color/holo_orange_dark"/>
+
+    <EditText
+        android:id="@+id/et_eamil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID">
+
+    </EditText>
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="PASSWORD">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_signIn"
+        android:onClick="signIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOGIN">
+    </Button>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FIND PASSWORD"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/main_sign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SIGN IN"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/PB_login"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
+
+
+
+</LinearLayout>
