@@ -23,11 +23,10 @@ import java.util.List;
  */
 
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> {
+
     private List<ChatData> mDataset;
     private String myNickName;
-    // Provide a reference to the views for each data item
-    // Complex data items may need more than one view per item, and
-    // you provide access to all the views for a data item in a view holder
+
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         public TextView TextView_nickname;
@@ -40,11 +39,9 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
             TextView_nickname = v.findViewById(R.id.TextView_nickname);
             TextView_msg = v.findViewById(R.id.TextView_msg);
             rootView = v;
-
         }
-
-
     }
+
 
     // Provide a suitable constructor (depends on the kind of dataset)
     public ChatAdapter(List<ChatData> myDataset, Context context, String myNickName) {
@@ -53,10 +50,11 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
         this.myNickName = myNickName;
     }
 
+
+
     // Create new views (invoked by the layout manager)
     @Override
-    public ChatAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,
-                                                       int viewType) {
+    public ChatAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // create a new view
         LinearLayout v = (LinearLayout) LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.row_chat, parent, false);

@@ -92,7 +92,9 @@ public class signin extends AppCompatActivity {
 
                         if (task.isSuccessful()) {
                             // 회원가입 성공
-                                    startActivity(new Intent(signin.this, MainActivity.class));
+                            startActivity(new Intent(signin.this, memberInfoUpdate.class));
+                            updateUI(memberInfoUpdate.class);
+                            finish();
 
 
                         } else {
@@ -101,5 +103,10 @@ public class signin extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    public void updateUI(Class c){
+        Intent intent = new Intent(getApplicationContext(),c);
+        startActivity(intent);
     }
 }

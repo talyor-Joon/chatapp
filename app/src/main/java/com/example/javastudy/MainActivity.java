@@ -5,19 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 import java.util.regex.Pattern;
 
@@ -44,15 +41,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btn = (Button) findViewById(R.id.main_sign);
+
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, signin.class));
             }
         });
 
-
         firebaseAuth = FirebaseAuth.getInstance();
-
         editTextEmail = findViewById(R.id.et_eamil);
         editTextPassword = findViewById(R.id.et_password);
 
@@ -107,11 +103,8 @@ public class MainActivity extends AppCompatActivity {
 
                         if (task.isSuccessful()) {
                             // 로그인 성공
-//                            Log.d(TAG, "signInWithEmail:success");
-//                            FirebaseUser user = mAuth.getCurrentUser();
-//                            updateUI(user);
 
-                            startActivity(new Intent(MainActivity.this, ChatActivity.class));
+                            startActivity(new Intent(MainActivity.this, friendlistAct.class));
                         } else {
                             // 로그인 실패
                             Toast.makeText(MainActivity.this, R.string.failed_login, Toast.LENGTH_SHORT).show();
